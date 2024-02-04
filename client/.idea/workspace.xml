@@ -5,40 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f2f9030-b422-41c5-b34a-96a15b05414f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(root)/(home)/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(root)/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/auth/login/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/auth/register/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/auth/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/modals/login-modal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/modals/register-modal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/alert.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/label.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/modal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/toast.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/toaster.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/use-toast.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/user.modal.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hooks/use-login-modal.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hooks/use-register-modal.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/auth-options.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mongoose.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/validation.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/providers/theme.provider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +45,7 @@
     "npm.dev.executor": "Run",
     "prettierjs.PrettierConfiguration.Package": "/home/humoyundev/Desktop/twitter-clone/client/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/snap/webstorm/354/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/home/humoyundev/Desktop/twitter-clone/client/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -120,7 +88,7 @@
       <workItem from="1707045864504" duration="5955000" />
       <workItem from="1707052154633" duration="878000" />
       <workItem from="1707053041364" duration="2507000" />
-      <workItem from="1707055556932" duration="4117000" />
+      <workItem from="1707055556932" duration="4572000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,8 @@ import { authOptions } from "@/lib/auth-options";
 import Auth from "@/components/auth";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "@/components/ui/toaster";
+import Sidebar from "@/components/sidebar/sidebar";
+import FollowBar from "@/components/shared/follow-bar";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -22,7 +24,7 @@ const Layout: React.FC<LayoutProps> = async ({ children }) => {
   return (
     <div className={`lg:container h-screen mx-auto lg:max-w-7xl`}>
       <div className={`flex`}>
-        {/*<Sidebar />*/}
+        <Sidebar user={JSON.parse(JSON.stringify(session.currentUser))} />
         <div
           className={`flex flex-1 border-x-[1px] border-neutral-800 lg:mx-4 ml-1`}
         >
@@ -42,7 +44,7 @@ const Layout: React.FC<LayoutProps> = async ({ children }) => {
             <Toaster />
           </div>
         </div>
-        {/*<FollowBar />*/}
+        <FollowBar />
       </div>
     </div>
   );

@@ -1,8 +1,7 @@
 import React from "react";
-import { LucideIcon } from "lucide-react";
 interface SidebarItemProps {
   label: string;
-  icon: LucideIcon;
+  icon: any;
 }
 
 const SidebarItem: React.FC<SidebarItemProps> = ({

@@ -47,7 +47,7 @@ const Sidebar = ({ user }: { user: any }) => {
         </div>
         {sidebarItems.map((item) => (
           <Link key={item.path} href={item.path}>
-            <SidebarItem {...item} />
+            <SidebarItem label={item.label} icon={item.icon} />
           </Link>
         ))}
 

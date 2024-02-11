@@ -48,9 +48,7 @@ const Page = ({ params }: { params: { postId: string } }) => {
     getComments();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  console.log(comments);
+  }, []); 
 
   return (
     <>

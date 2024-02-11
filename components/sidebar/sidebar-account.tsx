@@ -28,11 +28,11 @@ const SidebarAccount: React.FC<Props> = ({ user }) => {
           <div className="flex justify-between items-center gap-2">
             <div className="flex gap-2 items-center">
               <Avatar>
-                <AvatarImage src={user.profileImage} />
-                <AvatarFallback>{user.name[0]}</AvatarFallback>
+                <AvatarImage src={user?.profileImage} />
+                <AvatarFallback>{user?.name[0]}</AvatarFallback>
               </Avatar>
               <div className="flex flex-col items-start text-white">
-                <p>{user.name}</p>
+                <p>{user?.name}</p>
                 {user.username ? (
                   <p className="opacity-40">{user.username}</p>
                 ) : (

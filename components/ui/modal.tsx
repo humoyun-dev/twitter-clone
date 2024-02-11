@@ -1,6 +1,7 @@
-import React, { ReactElement } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { ReactElement } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./dialog";
 import { X } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface ModalProps {
   isOpen?: boolean;
@@ -8,38 +9,40 @@ interface ModalProps {
   body?: ReactElement;
   footer?: ReactElement;
   step?: number;
-  totalStep?: number;
+  totalSteps?: number;
+  isEditing?: boolean;
 }
 
-const Modal: React.FC<ModalProps> = ({
-  footer,
+export default function Modal({
   body,
+  footer,
   isOpen,
   onClose,
-  totalStep,
   step,
-}) => {
+  totalSteps,
+  isEditing,
+}: ModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className={`bg-black p-1`}>
-        <div className={`flex items-center gap-6`}>
-          <button
-            onClick={onClose}
-            className={`p-1 border-0 text-white hover:opacity-70 transition w-fit`}
-          >
-            <X size={28} />
+      <DialogContent
+        className={cn(
+          "bg-black p-1",
+          isEditing && "h-[80vh] overflow-x-hidden overflow-y-auto"
+        )}
+      >
+        <div className="flex items-center gap-6">
+          <button className="p-1 border-0 text-white hover:opacity-70 transition w-fit">
+            <X size={28} onClick={onClose} />
           </button>
-          {step && totalStep && (
-            <div className={`text-xl font-bold`}>
-              Step {step} of {totalStep}
+          {step && totalSteps && (
+            <div className="text-xl font-bold">
+              Step {step} of {totalSteps}
             </div>
           )}
         </div>
-        <div className={`mt-4`}>{body}</div>
-        {footer && <div className={`mt-4`}>{footer}</div>}
+        <div className="mt-4">{body}</div>
+        {footer && <div>{footer}</div>}
       </DialogContent>
     </Dialog>
   );
-};
-
-export default Modal;
+}

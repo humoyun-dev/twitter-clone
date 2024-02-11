@@ -1,6 +1,6 @@
 import { AuthOptions } from "next-auth";
 import { connectToDatabase } from "@/lib/mongoose";
-import User from "@/database/user.modal";
+import User from "@/database/user.model";
 
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";

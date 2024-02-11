@@ -3,7 +3,7 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth-options";
 import { connectToDatabase } from "../mongoose";
-import User from "@/database/user.modal";
+import User from "@/database/user.model";
 
 export async function getUserById(userId: string) {
   try {

@@ -1,4 +1,5 @@
-import User from "@/database/user.modal";
+import Notification from "@/database/notification.model";
+import User from "@/database/user.model";
 import { connectToDatabase } from "@/lib/mongoose";
 import { NextResponse } from "next/server";
 
@@ -15,10 +16,10 @@ export async function PUT(req: Request) {
       $push: { following: userId },
     });
 
-    // await Notification.create({
-    //   user: userId,
-    //   body: "Someone followed you!",
-    // });
+    await Notification.create({
+      user: userId,
+      body: "Someone followed you!",
+    });
 
     await User.findOneAndUpdate(
       { _id: userId },

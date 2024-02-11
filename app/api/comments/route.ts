@@ -2,9 +2,10 @@ import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
 import Comment from "@/database/comment.model";
 import Post from "@/database/post.model";
-import User from "@/database/user.modal";
+import User from "@/database/user.model";
 import { authOptions } from "@/lib/auth-options";
 import { connectToDatabase } from "@/lib/mongoose";
+import Notification from "@/database/notification.model";
 
 export async function POST(req: Request) {
   try {
@@ -15,10 +16,10 @@ export async function POST(req: Request) {
       $push: { comments: comment._id },
     });
 
-    // await Notification.create({
-    //   user: String(post.user),
-    //   body: "Someone replied on your post!",
-    // });
+    await Notification.create({
+      user: String(post.user),
+      body: "Someone replied on your post!",
+    });
 
     await User.findOneAndUpdate(
       { _id: String(post.user) },
@@ -42,10 +43,10 @@ export async function PUT(req: Request) {
       $push: { likes: currentUser._id },
     });
 
-    // await Notification.create({
-    //   user: String(comment.user),
-    //   body: "Someone liked on your replied post!",
-    // });
+    await Notification.create({
+      user: String(comment.user),
+      body: "Someone liked on your replied post!",
+    });
 
     await User.findOneAndUpdate(
       { _id: String(comment.user) },

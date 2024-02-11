@@ -8,21 +8,32 @@ import Link from "next/link";
 import SidebarItem from "@/components/sidebar/sidebar-item";
 import SidebarPostButton from "./sidebar-post-button";
 import SidebarAccount from "./sidebar-account";
+import { MdOutlineExplore } from "react-icons/md";
 
 const Sidebar = ({ user }: { user: any }) => {
   const { data: session, status }: any = useSession();
 
   const sidebarItems = [
-    { label: "Home", path: "/", icon: Home },
+    {
+      label: "Home",
+      path: "/",
+      icon: Home,
+    },
     {
       label: "Notifications",
-      path: `/notifications/${status === "authenticated" && user?._id}`,
+      path: `/notifications/${user?._id}`,
       icon: Bell,
+      notification: user?.hasNewNotifications,
     },
     {
       label: "Profile",
-      path: `/profile/${status === "authenticated" && user?._id}`,
+      path: `/profile/${user?._id}`,
       icon: User,
+    },
+    {
+      label: "Explore",
+      path: "/explore",
+      icon: MdOutlineExplore,
     },
   ];
 

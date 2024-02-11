@@ -1,4 +1,5 @@
-import User from "@/database/user.modal";
+
+import User from "@/database/user.model";
 import { connectToDatabase } from "@/lib/mongoose";
 import { NextResponse } from "next/server";
 

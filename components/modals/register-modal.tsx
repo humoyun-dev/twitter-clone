@@ -60,7 +60,7 @@ const RegisterModal = () => {
       isOpen={registerModal.isOpen}
       onClose={registerModal.onClose}
       step={step}
-      totalStep={2}
+      totalSteps={2}
     />
   );
 };

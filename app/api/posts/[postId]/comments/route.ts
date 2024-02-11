@@ -1,6 +1,6 @@
 import Comment from "@/database/comment.model";
 import Post from "@/database/post.model";
-import User from "@/database/user.modal";
+import User from "@/database/user.model";
 import { authOptions } from "@/lib/auth-options";
 import { connectToDatabase } from "@/lib/mongoose";
 import { getServerSession } from "next-auth";

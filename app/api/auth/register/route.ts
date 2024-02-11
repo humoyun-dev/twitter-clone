@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/mongoose";
-import User from "@/database/user.modal";
+import User from "@/database/user.model";
 import { hash } from "bcrypt";
 
 export async function POST(req: Request) {

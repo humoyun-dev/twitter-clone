@@ -8,13 +8,13 @@ import { BiCalendar } from "react-icons/bi";
 import { formatDistanceToNowStrict } from "date-fns";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-// import EditModal from "../modals/edit-modal";
-// import useEditModal from "@/hooks/useEditModal";
 import Modal from "../ui/modal";
 import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 import User from "../shared/user";
 import FollowUser from "../shared/follow-user";
+import useEditModal from "@/hooks/use-edit-modal";
+import EditModal from "../modals/edit-modal";
 
 const ProfileBio = ({ user, userId }: { user: IUser; userId: string }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,7 +25,7 @@ const ProfileBio = ({ user, userId }: { user: IUser; userId: string }) => {
   const [state, setState] = useState<"following" | "followers">("following");
 
   const router = useRouter();
-  // const editModal = useEditModal();
+  const editModal = useEditModal();
 
   const onFollow = async () => {
     try {
@@ -99,14 +99,14 @@ const ProfileBio = ({ user, userId }: { user: IUser; userId: string }) => {
 
   return (
     <>
-      {/* <EditModal user={user} /> */}
+      <EditModal user={user} />
       <div className="border-b-[1px] border-neutral-800 pb-4">
         <div className="flex justify-end p-2">
           {userId === user._id ? (
             <Button
               label={"Edit profile"}
               secondary
-              // onClick={() => editModal.onOpen()}
+              onClick={() => editModal.onOpen()}
             />
           ) : user.isFollowing ? (
             <Button
